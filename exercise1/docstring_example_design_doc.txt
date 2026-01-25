@@ -1,0 +1,62 @@
+# Technical Design Document: MannyOsorio_ProgrammingExericse_1
+
+# Name: Manny Osorio
+# Date: January 25, 2026
+# Program Description: This code lets users purchase tickets, checking that any single user can't purchase more than 4 tickets and that the total tickets sold is 20.
+
+## Function: check_condition
+Validates that the ticket amount does not exceed the maximum of 4.
+
+Parameters:
+    ticket_amt (int): The number of tickets to be purchased.
+
+Variables:
+    None
+
+Logic:
+    1. Check if ticket_amt is greater than 4.
+    2. If true, display an error message.
+    3. Otherwise, return True.
+
+Return:
+    bool: True if the ticket amount is valid (4 or less), False otherwise.
+
+## Function: main
+Runs the main ticket purchasing program.
+
+Parameters:
+    None
+
+Variables:
+    total_tickets_sold (int): The total number of tickets sold so far.
+    ticket_amt (int): The number of tickets the user wants to purchase.
+
+Logic:
+    1. Initialize total_tickets_sold to 0.
+    2. Loop while total_tickets_sold is less than 20.
+    3. Prompt the user for the number of tickets to purchase.
+    4. Validate the ticket amount using check_condition().
+    5. If valid, purchase the tickets and display the result.
+
+Return:
+    None
+
+## Function: purchase_ticket
+Adds purchased tickets to the current total and returns the new total.
+
+Parameters:
+    current_ticket_amt (int): The current number of tickets sold.
+    ticket_amt (int): The number of tickets being purchased.
+
+Variables:
+    total_tickets_sold (int): The updated total number of tickets sold.
+
+Logic:
+    1. Add ticket_amt to current_ticket_amt.
+    2. Store the result in total_tickets_sold.
+    3. Return the new total.
+
+Return:
+    int: The updated total number of tickets sold.
+
+#Link to your repository: https://github.com/atlasshiny?tab=repositories
