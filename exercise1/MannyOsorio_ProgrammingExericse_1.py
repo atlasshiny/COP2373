@@ -20,6 +20,7 @@ def main():
         None
     """
     total_tickets_sold = 0
+    total_buyers = 0
 
     while total_tickets_sold < 20:
         # Get user input for number of tickets
@@ -29,10 +30,13 @@ def main():
         if check_condition(ticket_amt) == True:
             # Add the tickets to the total if valid
             total_tickets_sold = purchase_ticket(total_tickets_sold, ticket_amt)
+            total_buyers += 1
             print("Purchase successful")
             print(f"Remaining Tickets: {20 - total_tickets_sold}")
+
+    print(f"Total Buyers: {total_buyers}")
     
-def check_condition(ticket_amt: int) -> bool:
+def check_condition(ticket_amt: int) -> bool | None:
     """
     Validates that the ticket amount does not exceed the maximum of 4.
     
