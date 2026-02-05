@@ -6,12 +6,12 @@ def main():
         None
     
     Variables:
-        total_tickets_sold (int): The total number of tickets sold so far.
+        total_tickets_sold_now (int): The total number of tickets sold so far.
         ticket_amt (int): The number of tickets the user wants to purchase.
     
     Logic:
-        1. Initialize total_tickets_sold to 0.
-        2. Loop while total_tickets_sold is less than 20.
+        1. Initialize total_tickets_sold_now to 0.
+        2. Loop while total_tickets_sold_now is less than 20.
         3. Prompt the user for the number of tickets to purchase.
         4. Validate the ticket amount using check_condition().
         5. If valid, purchase the tickets and display the result.
@@ -19,21 +19,21 @@ def main():
     Return:
         None
     """
-    total_tickets_sold = 0
+    total_tickets_sold_now = 0
     total_buyers = 0
     total_tickets = 10
 
-    while total_tickets_sold < total_tickets:
+    while total_tickets_sold_now < total_tickets:
         # Get user input for number of tickets
         ticket_amt = input("What is the desired amount of tickets (max = 4): ")
         ticket_amt = int(ticket_amt)
 
         if check_condition(ticket_amt) == True:
             # Add the tickets to the total if valid
-            total_tickets_sold = purchase_ticket(total_tickets_sold, ticket_amt)
+            total_tickets_sold_now = purchase_ticket(total_tickets_sold_now, ticket_amt)
             total_buyers += 1
             print("Purchase successful")
-            print(f"Remaining Tickets: {total_tickets - total_tickets_sold}")
+            print(f"Remaining Tickets: {total_tickets - total_tickets_sold_now}")
 
     print(f"Total Buyers: {total_buyers}")
     
@@ -70,20 +70,20 @@ def purchase_ticket(current_ticket_amt: int, ticket_amt: int) -> int:
         ticket_amt (int): The number of tickets being purchased.
     
     Variables:
-        total_tickets_sold (int): The updated total number of tickets sold.
+        total_tickets_sold_now (int): The updated total number of tickets sold.
     
     Logic:
         1. Add ticket_amt to current_ticket_amt.
-        2. Store the result in total_tickets_sold.
+        2. Store the result in total_tickets_sold_now.
         3. Return the new total.
     
     Return:
         int: The updated total number of tickets sold.
     """
     # Calculate the new total by adding purchased tickets to current total
-    total_tickets_sold = current_ticket_amt + ticket_amt
+    total_tickets_sold_now = current_ticket_amt + ticket_amt
 
-    return total_tickets_sold
+    return total_tickets_sold_now
     
 if __name__ == "__main__":
     main()
