@@ -25,7 +25,7 @@ def main():
 
     while total_tickets_sold < total_tickets:
         # Get user input for number of tickets
-        ticket_amt = input("How many tickets would you like to purchase (max = 4): ")
+        ticket_amt = input("What is the desired amount of tickets (max = 4): ")
         ticket_amt = int(ticket_amt)
 
         if check_condition(ticket_amt) == True:
