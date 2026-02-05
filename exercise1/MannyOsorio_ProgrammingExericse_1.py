@@ -21,8 +21,9 @@ def main():
     """
     total_tickets_sold = 0
     total_buyers = 0
+    total_tickets = 20
 
-    while total_tickets_sold < 20:
+    while total_tickets_sold < total_tickets:
         # Get user input for number of tickets
         ticket_amt = input("How many tickets would you like to purchase (max = 4): ")
         ticket_amt = int(ticket_amt)
@@ -32,7 +33,7 @@ def main():
             total_tickets_sold = purchase_ticket(total_tickets_sold, ticket_amt)
             total_buyers += 1
             print("Purchase successful")
-            print(f"Remaining Tickets: {20 - total_tickets_sold}")
+            print(f"Remaining Tickets: {total_tickets - total_tickets_sold}")
 
     print(f"Total Buyers: {total_buyers}")
     
