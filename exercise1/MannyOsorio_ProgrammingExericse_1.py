@@ -21,7 +21,7 @@ def main():
     """
     total_tickets_sold = 0
     total_buyers = 0
-    total_tickets = 20
+    total_tickets = 10
 
     while total_tickets_sold < total_tickets:
         # Get user input for number of tickets
