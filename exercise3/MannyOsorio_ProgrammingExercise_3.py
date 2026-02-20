@@ -1,6 +1,12 @@
 from functools import reduce
 
 def main():
+    """Prompt for expenses, compute total, max, and min, and print summary.
+
+    Repeatedly asks the user for an expense name and amount until the
+    user types 'done'. Computes the total, maximum, and minimum
+    expenses and prints the results.
+    """
     expenses = {}
 
     # ask the user for all their expenses
